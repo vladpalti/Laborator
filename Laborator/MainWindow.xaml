@@ -46,18 +46,28 @@
         <Button x:Name="btnAddToSale" Content="Add to Sale" Grid.Column="3" HorizontalAlignment="Left" Margin="520,285,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.711,0.777" Height="19"/>
         <Button x:Name="btnRemoveItem" Content="Remove Item" Grid.Column="3" HorizontalAlignment="Left" Margin="520,309,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.711,0.777" Height="19"/>
         <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top"
-Width="131" Margin="2,3,0,0" Grid.ColumnSpan="4">
+Width="131" Margin="0,26,0,0">
             <MenuItem Header="File">
-                <MenuItem Header="Exit"/>
+                <MenuItem Header="Exit" Click="exitToolStripMenuItem_Click"/>
             </MenuItem>
             <MenuItem Header="_Doughnuts">
-                <MenuItem Header="Make">
+                <MenuItem x:Name="Lemon" Header="Make">
                     <MenuItem Header="Raised">
-                        <MenuItem x:Name="glazedMenuItem" Header="Glazed"/>
-                        <MenuItem x:Name="sugarMenuItem" Header="Sugar"/>
+                        <MenuItem x:Name="glazedToolStripMenuItem" Header="Glazed"
+Click="glazedToolStripMenuItem_Click" IsCheckable="True"/>
+                        <MenuItem x:Name="sugarToolStripMenuItem" Header="Sugar"
+IsCheckable="True" Click="sugarToolStripMenuItem_Click"/>
                     </MenuItem>
-                    <MenuItem Header="Filled"/>
+                    <MenuItem Header="Filled">
+                        <MenuItem x:Name="lemonFilledMenuItem" Header="Lemon" IsCheckable="True"/>
+                        <MenuItem x:Name="chocolateFilledMenuItem" Header="Chocolate" IsCheckable="True"/>
+                        <MenuItem x:Name="vanillaFilledMenuItem" Header="Vanilla" IsCheckable="True"/>
+                    </MenuItem>
+
                 </MenuItem>
+                <MenuItem x:Name="mnuStop" Header="Stop" Click="stopToolStripMenuItem_Click" InputGestureText="Ctrl+S" Command="CustomCommands:StopCommand.Launch" />
+                <MenuItem Header="Inventory"  Command="ApplicationCommands.Print"></MenuItem>
+
             </MenuItem>
         </Menu>
     </Grid>

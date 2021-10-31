@@ -40,7 +40,7 @@ namespace Vlad_Paltineanu_Lab2
             InitializeComponent();
         }
 
-        private void DoughnutTimer_Tick(object sender, EventArgs e)
+        private void doughnutTimer_Tick(object sender, EventArgs e)
         {
             Doughnut aDoughnut = new Doughnut(this.Flavor);
             DoughnutComplete();
@@ -116,8 +116,3 @@ namespace Vlad_Paltineanu_Lab2
         }
     }
 }
-
-
-
-
-
