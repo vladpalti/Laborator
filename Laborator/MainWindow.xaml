@@ -46,7 +46,7 @@
         <Button x:Name="btnAddToSale" Content="Add to Sale" Grid.Column="3" HorizontalAlignment="Left" Margin="520,285,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.711,0.777" Height="19"/>
         <Button x:Name="btnRemoveItem" Content="Remove Item" Grid.Column="3" HorizontalAlignment="Left" Margin="520,309,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.711,0.777" Height="19"/>
         <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top"
-Width="131" Margin="0,26,0,0">
+Width="131" Margin="2,3,0,0" Grid.ColumnSpan="4">
             <MenuItem Header="File">
                 <MenuItem Header="Exit"/>
             </MenuItem>
